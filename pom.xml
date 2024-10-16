@@ -5,7 +5,7 @@
   <artifactId>my-app</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>my-app</name>
+  <name>maven-sonar</name>
   <url>https://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -72,4 +72,24 @@
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>sonar-analysis</id>
+      <properties>
+        <sonar.projectKey>maven-sonar</sonar.projectKey>
+      </properties>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.sonarsource.scanner.maven</groupId>
+              <artifactId>sonar-maven-plugin</artifactId>
+              <version>3.7.0.1746</version>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+  </profiles>
 </project>
