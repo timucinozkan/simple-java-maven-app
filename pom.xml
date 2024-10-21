@@ -81,7 +81,7 @@
         <version>4.29.2</version>
         <configuration>
           <changeLogFile>changelog.xml</changeLogFile>
-          <url>jdbc:oracle:thin:@oracle:1521:FREEPDB1</url>
+          <url>jdbc:oracle:thin:@oracle:1521/FREEPDB1</url>
           <username>my_user</username>
           <password>testpassword</password>
         </configuration>
