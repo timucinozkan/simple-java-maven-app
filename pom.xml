@@ -84,7 +84,7 @@
           <url>jdbc:oracle:thin:@//localhost:1521/FREEPDB1</url>
           <username>my_user</username>
           <password>testpassword</password>
-        <configuration>
+        </configuration>
       </plugin>
     </plugins>
   </build>
