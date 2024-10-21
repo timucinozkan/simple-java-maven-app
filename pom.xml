@@ -14,6 +14,11 @@
       <version>5.11.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.oracle.database.jdbc</groupId>
+      <artifactId>ojdbc8</artifactId>
+      <version>21.5.0.0</version>
+  </dependency>
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,6 +74,17 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-maven-plugin</artifactId>
+        <version>4.29.2</version>
+        <configuration>
+          <changeLogFile>changelog.xml</changeLogFile>
+          <url>jdbc:oracle:thin:@//localhost:1521/FREEPDB1</url>
+          <username>my_user</username>
+          <password>testpassword</password>
+        <configuration>
       </plugin>
     </plugins>
   </build>
